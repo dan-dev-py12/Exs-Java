@@ -9,12 +9,15 @@ public class main {
 		FuncionarioPJ F2 = new FuncionarioPJ("Vitor", 02);
 		
 		F2.setQuantidadeProjetos(8);
-		double sal2 = F2.calcularSalario();
-		
 		double sal1 =F1.calcularSalario();
+		double sal2 = F2.salarioTotal();
 		
-		System.out.println(sal1);
-		System.out.println(sal2);
+		
+		
+		F1.exibirDados();
+		System.out.printf("Salário CLT: R$ %.2f%n", sal1);
+		F2.exibirDados();
+		System.out.printf("Salário PJ: R$ %.2f%n", sal2);
 		
 
 	}

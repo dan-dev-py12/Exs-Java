@@ -34,14 +34,6 @@ public abstract class Funcionario {
 		System.out.println("Matricula: " + matricula);
 	}
 	
-	
-	
-		
 
-	
-	
-	
-	
-	
 	
 }

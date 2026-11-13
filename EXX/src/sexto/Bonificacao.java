@@ -4,8 +4,5 @@ public interface Bonificacao {
 
 	
 	public double calcularBonus();
-	
-	
-	
-	
+
 }
