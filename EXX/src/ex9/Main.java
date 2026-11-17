@@ -43,24 +43,7 @@ public class Main {
 		System.out.println("Valor final Cartão: " + valorCartao);
 		
 		*/
-		
-		/*1. 
 
-
-Desafio extra — Polimorfismo
-Utilize referências do tipo Pagamento para instanciar os três tipos de pagamento.
-
-Lembre-se: calcularDesconto() não estará disponível diretamente na referência Pagamento, pois pertence à interface Descontavel.
-
-Uma dica: não tente resolver tudo de uma vez. Comece pela classe abstrata Pagamento e me envie seu código para revisarmos.
-
-Quero ver se você consegue aplicar sozinho os conceitos que trabalhamos nos três exercícios anteriores!
-
-
-
-
-
-qual*/
 
 	}
 
