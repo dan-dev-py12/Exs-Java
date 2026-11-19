@@ -12,13 +12,17 @@ public class Main {
 		};
 		
 		livros[0].emprestar();
-		livros[0].devolver();
 		
 		
+		int livrosDisponiveis = 0;
 		
 		for(Livro livro : livros) {
 			livro.infoLivros();
+			if  (livro.getDisponivel()) {
+				livrosDisponiveis += 1;
+			}
 			System.out.println("-=-=-=-=-=-=-");
+			System.out.printf("Tenho %d livros disponiveis",livrosDisponiveis);
 			
 		}
 		
