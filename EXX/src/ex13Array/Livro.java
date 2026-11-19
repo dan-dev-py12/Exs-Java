@@ -44,8 +44,12 @@ public class Livro {
 		}
 	}
 	public void devolver() {
-		setDisponivel(true);
-		System.out.println("Devolveram: " + titulo);
+		if (!getDisponivel()) {
+			System.out.println("Devolveram: " + titulo);
+			setDisponivel(true);
+		} else {
+		    System.out.println("Ja me devolveram: " + titulo);
+		}
 		
 	}
 	
@@ -54,11 +58,5 @@ public class Livro {
 		System.out.println("Autor(a): " + autor);
 		System.out.println("Disponivel: " + disponivel);
 	}
-	
-	
-	
-	
-	
-	
 	
 }
