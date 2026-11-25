@@ -1,6 +1,6 @@
 package br.com.dio.dao;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -85,14 +85,14 @@ public class Main {
 		System.out.println("ID do usuario: ");
 		var id = sc.nextLong();
 		System.out.println("Nome do usuario: ");
-		var name = sc.nextLine();
+		var name = sc.next();
 		System.out.println("e-mail do usuario: ");
-		var email = sc.nextLine();
+		var email = sc.next();
 		System.out.println("Data de nascimento do usuario: (dd/MM/yyyy)");
-		var niverString = sc.nextLine();
+		var niverString = sc.next();
 		var formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		var niver = OffsetDateTime.parse(niverString, formatter);
-		return  new UserModel(0, name, email,niver);
+		var niver = LocalDate.parse(niverString, formatter);
+		return  new UserModel(0L, name, email,niver);
 	}
 
 	
