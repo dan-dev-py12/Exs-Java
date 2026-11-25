@@ -25,7 +25,7 @@ public class Main {
 			switch (selectedOption) {
 				case SAVE -> {
 					var user = dao.save(requestToSave());
-					System.out.printf("Usuario cadastrado %s", user);
+					System.out.printf("Usuario cadastrado %s\n", user);
 					
 				}
 				case UPDATE -> {
@@ -38,10 +38,13 @@ public class Main {
 					System.out.println("Usuario excluido!");
 				}
 				case FIND_BY_ID -> {
-					var id = requestId();
+					try {var id = requestId();
 					var user = dao.findById(id);
 					System.out.printf("Usuario com ID %s ", id);
 					System.out.println(user);
+					}catch (UserNotFoundException ex){
+
+					}
 					
 				}
 				case FIND_ALL -> {
@@ -69,14 +72,14 @@ public class Main {
 	}
 	private static UserModel requestToSave() {
 		System.out.println("Nome do usuario: ");
-		var name = sc.nextLine();
 		System.out.println("e-mail do usuario: ");
-		var email = sc.nextLine();
+		var name = sc.next();
+		var email = sc.next();
 		System.out.println("Data de nascimento do usuario: (dd/MM/yyyy)");
-		var niverString = sc.nextLine();
+		var niverString = sc.next();
 		var formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		var niver = OffsetDateTime.parse(niverString, formatter);
-		return  new UserModel(0, name, email,niver);
+		var niver = LocalDate.parse(niverString, formatter);
+		return  new UserModel(0L, name, email,niver);
 	}
 	private static UserModel requestToUpdate() {
 		System.out.println("ID do usuario: ");
